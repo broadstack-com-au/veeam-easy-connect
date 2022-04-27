@@ -32,7 +32,7 @@ api_settings = {
     "spc": {
         "headers": {
             "accept": "application/json",
-            "content-type": "application/json",
+            "content-type": "application/x-www-form-urlencoded",
         },
         "port": "1280",
         "url": "/api/v3/token",
