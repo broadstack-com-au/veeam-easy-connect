@@ -207,7 +207,10 @@ class VeeamEasyConnect:
         if "refresh_token" in self.res_json_oauth:
             self.set_refresh_token(self.res_json_oauth["refresh_token"])
 
-        if "mfa_token" not in self.res_json_oauth or not self.res_json_oauth["mfa_token"]:
+        if (
+            "mfa_token" not in self.res_json_oauth
+            or not self.res_json_oauth["mfa_token"]
+        ):
             self.request_header = self.get_request_header()
             return
 
