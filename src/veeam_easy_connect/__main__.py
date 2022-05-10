@@ -295,7 +295,7 @@ class VeeamEasyConnect:
 
         headers = self.api_settings[self.api_type]["headers"]
         if "application/x-www-form-urlencoded" in headers.values():
-            del headers["content-type"]
+            headers["content-type"] = "application/json"
         bearer_string = self.get_access_token_with_bearer()
         headers["authorization"] = bearer_string
         return headers
